@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import PageHeader from "@/components/PageHeader";
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -11,17 +12,14 @@ export default function ContactoPage() {
   };
 
   return (
-    <div className="pt-20">
-      <section className="py-20 bg-gradient-to-b from-stone-950 to-stone-900">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h1 className="font-display text-5xl sm:text-6xl text-white tracking-wide">CONTACTO</h1>
-            <div className="w-20 h-1 gradient-fire mx-auto mt-4 rounded-full" />
-          </div>
-
+    <>
+      <PageHeader title="CONTACTO" />
+      
+      <section className="py-16 px-4 bg-zinc-900/50">
+        <div className="max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="font-accent text-xl text-white mb-6">Información</h2>
+              <h2 className="font-accent text-xl text-white mb-6">Información de Contacto</h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-red-600/20 flex items-center justify-center flex-shrink-0">
@@ -31,7 +29,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-white">Dirección</h3>
-                    <p className="text-gray-500">Logroño 1298, Viña del Mar</p>
+                    <p className="text-zinc-500">Logroño 1298, Viña del Mar, Chile</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -42,7 +40,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-white">Teléfono</h3>
-                    <p className="text-gray-500">(56-32) 261 03 97</p>
+                    <p className="text-zinc-500">(56-32) 261 03 97</p>
                     <p className="text-red-500 font-semibold">Emergencias: 132</p>
                   </div>
                 </div>
@@ -54,23 +52,56 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-white">Email</h3>
-                    <p className="text-gray-500">contacto@septimabomberos.cl</p>
+                    <p className="text-zinc-500">contacto@septimabomberos.cl</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-red-600/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-white">Horario</h3>
+                    <p className="text-zinc-500">Atención 24/7</p>
+                    <p className="text-zinc-500">Oficina: Lunes a Viernes 9:00 - 18:00</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div>
-              <h2 className="font-accent text-xl text-white mb-6">Envíanos un mensaje</h2>
+              <h2 className="font-accent text-xl text-white mb-6">Envíanos un Mensaje</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <input type="text" placeholder="Nombre" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="w-full px-4 py-3 bg-stone-800 border border-stone-700 rounded-lg text-white placeholder-gray-600 focus:border-red-500 focus:outline-none" required />
+                  <input 
+                    type="text" 
+                    placeholder="Nombre" 
+                    value={formData.name} 
+                    onChange={(e) => setFormData({...formData, name: e.target.value})} 
+                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:border-red-500 focus:outline-none" 
+                    required 
+                  />
                 </div>
                 <div>
-                  <input type="email" placeholder="Email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full px-4 py-3 bg-stone-800 border border-stone-700 rounded-lg text-white placeholder-gray-600 focus:border-red-500 focus:outline-none" required />
+                  <input 
+                    type="email" 
+                    placeholder="Email" 
+                    value={formData.email} 
+                    onChange={(e) => setFormData({...formData, email: e.target.value})} 
+                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:border-red-500 focus:outline-none" 
+                    required 
+                  />
                 </div>
                 <div>
-                  <textarea placeholder="Mensaje" rows={4} value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} className="w-full px-4 py-3 bg-stone-800 border border-stone-700 rounded-lg text-white placeholder-gray-600 focus:border-red-500 focus:outline-none resize-none" required />
+                  <textarea 
+                    placeholder="Mensaje" 
+                    rows={4} 
+                    value={formData.message} 
+                    onChange={(e) => setFormData({...formData, message: e.target.value})} 
+                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:border-red-500 focus:outline-none resize-none" 
+                    required 
+                  />
                 </div>
                 <button type="submit" className="w-full px-6 py-3 gradient-fire text-white font-semibold rounded-lg">Enviar Mensaje</button>
               </form>
@@ -78,6 +109,6 @@ export default function ContactoPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

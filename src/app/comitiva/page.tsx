@@ -1,3 +1,5 @@
+import PageHeader from "@/components/PageHeader";
+
 export default function ComitivaPage() {
   const oficiales = [
     { cargo: "Capitán", nombre: "Ignacio Morales Barckhahn" },
@@ -11,29 +13,28 @@ export default function ComitivaPage() {
   ];
 
   return (
-    <div className="pt-20">
-      <section className="py-20 bg-gradient-to-b from-stone-950 to-stone-900">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h1 className="font-display text-5xl sm:text-6xl text-white tracking-wide">COMITIVA 2026</h1>
-            <div className="w-20 h-1 gradient-fire mx-auto mt-4 rounded-full" />
-          </div>
-
+    <>
+      <PageHeader title="COMITIVA 2026" />
+      
+      <section className="py-16 px-4 bg-zinc-900/50">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-center text-zinc-400 mb-12">Bomberas y bomberos voluntarios que lideran nuestra compañía</p>
+          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {oficiales.map((oficial, index) => (
-              <div key={index} className="bg-stone-800/50 border border-red-600/10 rounded-xl p-5 text-center hover:border-red-600/30 transition-all">
+              <div key={index} className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-5 text-center hover:border-red-600/50 transition-all">
                 <div className="w-16 h-16 mx-auto mb-3 rounded-full gradient-fire flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                   </svg>
                 </div>
-                <h3 className="font-accent text-white text-sm tracking-wide">{oficial.nombre}</h3>
+                <h3 className="font-accent text-white text-sm">{oficial.nombre}</h3>
                 <p className="text-red-500 text-xs font-semibold mt-1">{oficial.cargo}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

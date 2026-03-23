@@ -15,7 +15,7 @@ export default function ContactoPage() {
     <>
       <PageHeader title="CONTACTO" />
       
-      <section className="py-16 px-4 bg-zinc-900/50 min-h-screen">
+      <div className="py-16 px-4 bg-zinc-900/50">
         <div className="max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
@@ -108,7 +108,7 @@ export default function ContactoPage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

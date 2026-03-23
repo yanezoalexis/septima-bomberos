@@ -11,7 +11,7 @@ export default function NovedadesPage() {
     <>
       <PageHeader title="NOVEDADES" />
       
-      <section className="py-16 px-4 bg-zinc-900/50 min-h-screen">
+      <div className="py-16 px-4 bg-zinc-900/50">
         <div className="max-w-4xl mx-auto space-y-4">
           {novedades.map((novedad, index) => (
             <div key={index} className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-5 hover:border-red-600/50 transition-all">
@@ -21,7 +21,7 @@ export default function NovedadesPage() {
             </div>
           ))}
         </div>
-      </section>
+      </div>
     </>
   );
 }

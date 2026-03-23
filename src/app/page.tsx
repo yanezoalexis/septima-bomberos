@@ -33,8 +33,8 @@ function FireCanvas() {
 
     for (let i = 0; i < 50; i++) {
       particles.push({
-        x: Math.random() * canvas.width,
-        y: canvas.height + Math.random() * 100,
+        x: Math.random() * c.width,
+        y: c.height + Math.random() * 100,
         size: Math.random() * 2 + 1,
         speedY: Math.random() * 1 + 0.5,
         speedX: (Math.random() - 0.5) * 0.3,
@@ -114,7 +114,7 @@ export default function Home() {
     <>
       <FireCanvas />
       
-      <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
+      <section className="relative min-h-screen flex items-center justify-center px-4" style={{ paddingTop: '64px' }}>
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <p className="inline-flex items-center gap-2 px-4 py-2 bg-red-600/20 border border-red-600/30 rounded-full text-sm text-zinc-400 mb-8">
             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>

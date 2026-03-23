@@ -14,7 +14,7 @@ export default function ServiciosPage() {
     <>
       <PageHeader title="SERVICIOS" />
       
-      <section className="py-16 px-4 bg-zinc-900/50 min-h-screen">
+      <div className="py-16 px-4 bg-zinc-900/50">
         <div className="max-w-5xl mx-auto">
           <p className="text-center text-zinc-400 mb-12">Brentados para responder ante diversas emergencias las 24 horas del día</p>
           
@@ -28,7 +28,7 @@ export default function ServiciosPage() {
             ))}
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

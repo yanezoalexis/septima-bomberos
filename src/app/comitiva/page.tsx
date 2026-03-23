@@ -16,7 +16,7 @@ export default function ComitivaPage() {
     <>
       <PageHeader title="COMITIVA 2026" />
       
-      <section className="py-16 px-4 bg-zinc-900/50 min-h-screen">
+      <div className="py-16 px-4 bg-zinc-900/50">
         <div className="max-w-5xl mx-auto">
           <p className="text-center text-zinc-400 mb-12">Bomberas y bomberos voluntarios que lideran nuestra compañía</p>
           
@@ -34,7 +34,7 @@ export default function ComitivaPage() {
             ))}
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

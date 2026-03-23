@@ -9,8 +9,8 @@ const navLinks = [
   { href: "/comitiva", label: "Comitiva" },
   { href: "/servicios", label: "Servicios" },
   { href: "/galeria", label: "Galería" },
+  { href: "/instagram", label: "Instagram" },
   { href: "/novedades", label: "Novedades" },
-  { href: "/seguridad", label: "Seguridad" },
   { href: "/contacto", label: "Contacto" },
 ];
 
@@ -37,14 +37,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-full gradient-fire flex items-center justify-center animate-pulse-fire">
-              <svg
-                className="w-8 h-8 text-white"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2C8.5 2 5 5.5 5 10c0 3 1.5 5.5 4 7v3c0 .5.5 1 1 1h4c.5 0 1-.5 1-1v-3c2.5-1.5 4-4 4-7 0-4.5-3.5-8-7-8zm0 2c2.8 0 5 2.2 5 5 0 1.5-.5 3-1.5 4h-7C7.5 12 7 10.5 7 9c0-2.8 2.2-5 5-5zm0 3a2 2 0 100 4 2 2 0 000-4z" />
-              </svg>
+            <div className="w-12 h-12 rounded-full overflow-hidden gradient-fire flex items-center justify-center animate-pulse-fire shadow-lg shadow-fire-red/30">
+              <img src="/logo.svg" alt="7ª Compañía" className="w-10 h-10" />
             </div>
             <div className="hidden sm:block">
               <span className="font-display text-2xl text-white tracking-wider">
@@ -69,7 +63,18 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.instagram.com/septima.cbvm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:flex items-center gap-2 px-3 py-2 text-fog-gray hover:text-fire-orange transition-colors duration-300"
+              aria-label="Instagram"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
             <a
               href="tel:+56322610397"
               className="hidden md:flex items-center gap-2 px-4 py-2 bg-fire-red/20 border border-fire-red/50 rounded-lg text-fire-red hover:bg-fire-red hover:text-white transition-all duration-300"

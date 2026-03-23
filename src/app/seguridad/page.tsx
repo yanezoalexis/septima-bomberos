@@ -27,7 +27,7 @@ export default function SeguridadPage() {
     <>
       <PageHeader title="SEGURIDAD" />
       
-      <section className="py-16 px-4 bg-zinc-900/50">
+      <section className="py-16 px-4 bg-zinc-900/50 min-h-screen">
         <div className="max-w-4xl mx-auto space-y-6">
           {tips.map((tip, index) => (
             <div key={index} className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6">

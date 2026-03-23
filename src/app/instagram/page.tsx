@@ -5,7 +5,7 @@ export default function InstagramPage() {
     <>
       <PageHeader title="@SEPTIMA.CBVM" />
       
-      <section className="py-16 px-4 bg-zinc-900/50">
+      <section className="py-16 px-4 bg-zinc-900/50 min-h-screen">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-zinc-400 mb-8">Síguenos en Instagram para ver nuestras últimas actividades e intervenciones</p>
           

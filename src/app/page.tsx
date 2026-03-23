@@ -114,7 +114,7 @@ export default function Home() {
     <>
       <FireCanvas />
       
-      <section className="relative min-h-screen flex items-center justify-center px-4">
+      <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <p className="inline-flex items-center gap-2 px-4 py-2 bg-red-600/20 border border-red-600/30 rounded-full text-sm text-zinc-400 mb-8">
             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>

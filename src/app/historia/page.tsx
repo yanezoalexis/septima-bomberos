@@ -5,7 +5,7 @@ export default function HistoriaPage() {
     <>
       <PageHeader title="NUESTRA HISTORIA" />
       
-      <section className="py-16 px-4 bg-zinc-900/50">
+      <section className="py-16 px-4 bg-zinc-900/50 min-h-screen">
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6">
             <h2 className="font-display text-2xl text-orange-400 mb-4">Orígenes (1968)</h2>

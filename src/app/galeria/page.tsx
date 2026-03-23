@@ -5,7 +5,7 @@ export default function GaleriaPage() {
     <>
       <PageHeader title="GALERÍA" />
       
-      <section className="py-16 px-4 bg-zinc-900/50">
+      <section className="py-16 px-4 bg-zinc-900/50 min-h-screen">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-zinc-400 mb-8">Próximamente más imágenes de nuestras intervenciones y actividades</p>
           
